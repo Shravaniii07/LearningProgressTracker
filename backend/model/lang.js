@@ -24,6 +24,6 @@ required:false
 
 },{timestamps:true})
 
-const book=mongoose.model("book",bookSchema);
+const book=mongoose.model("book",langSchema);
 
 module.exports=book;
