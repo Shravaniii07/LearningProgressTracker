@@ -8,7 +8,7 @@ const [list,setList] = useState([]);
 
 const fetchData = async () => {
   try{
-    const res = await axios.get("http://localhost:5000/get-progress");
+    const res = await axios.get("http://localhost:8000/book/get-progress");
     setList(res.data.ProgressList);
   }
   catch(err){
@@ -20,7 +20,7 @@ const deleteProgress = async (id) => {
 
   try{
 
-  await axios.delete("http://localhost:5000/delete-progress",{
+  await axios.delete("http://localhost:8000/book/delete-progress",{
     data:{Id:id}
   });
 

@@ -11,6 +11,7 @@
 //     <BrowserRouter>
 //       <Navbar />
 
+
 //       <Routes>
 //         <Route path="/" element={<Home />} />
 //         <Route path="/add" element={<AddProgress />} />
@@ -20,6 +21,19 @@
 //     </BrowserRouter>
 //   );
 // }
+
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/add" element={<AddProgress />} />
+//         <Route path="/view" element={<ViewProgress />} />
+//         <Route path="/update/:id" element={<UpdateProgress />} />
+//       </Routes>
+//     </BrowserRouter>
+
+   
+//   );
+// }
+
 
 // export default App;
 

@@ -32,4 +32,66 @@ error:err.message
 
 }
 
-module.exports = {handleAddProgress};
+// GET PROGRESS
+const handleGetProgress = async(req,res)=>{
+try{
+
+const list = await progress.find();
+
+res.status(200).json({
+ProgressList:list
+})
+
+}
+catch(err){
+res.status(500).json({msg:"Server Error"})
+}
+}
+
+
+// DELETE PROGRESS
+const handleDeleteProgress = async(req,res)=>{
+try{
+
+const {Id} = req.body;
+
+await progress.findByIdAndDelete(Id);
+
+res.status(200).json({
+msg:"Progress Deleted"
+})
+
+}
+catch(err){
+res.status(500).json({msg:"Server Error"})
+}
+}
+
+
+// UPDATE PROGRESS
+const handleUpdateProgress = async(req,res)=>{
+try{
+
+const {Id,...data} = req.body;
+
+await progress.findByIdAndUpdate(Id,data);
+
+res.status(200).json({
+msg:"Progress Updated"
+})
+
+}
+catch(err){
+res.status(500).json({msg:"Server Error"})
+}
+}
+
+
+module.exports = {
+handleAddProgress,
+handleGetProgress,
+handleDeleteProgress,
+handleUpdateProgress
+};
+
+// module.exports = {handleAddProgress};
