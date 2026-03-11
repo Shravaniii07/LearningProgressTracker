@@ -21,13 +21,19 @@ setData({...data,[e.target.name]:e.target.value});
 const handleSubmit=async(e)=>{
 e.preventDefault();
 
-await axios.put("http://localhost:8000/book/update-progress",{
+try{
+const res=await axios.put("http://localhost:8000/book/update-progress",{
 Id:id,
 ...data
 });
 
 alert("Progress Updated");
-
+}
+catch(err){
+    console.log(err);
+    alert("Error updating progress");
+    
+}
 }
 
 return(
