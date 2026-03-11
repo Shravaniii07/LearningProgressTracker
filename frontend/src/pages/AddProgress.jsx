@@ -19,9 +19,30 @@ setData({...data,[e.target.name]:e.target.value})
 const handleSubmit=async(e)=>{
 e.preventDefault()
 
-await axios.post("http://localhost:5000/add-progress",data)
+try{
+
+
+
+const res= await axios.post("http://localhost:8000/book/add-progress",data)
+
+console.log(res.data);
 
 alert("Progress Added Successfully")
+
+setData({
+Category:"",
+Subject:"",
+Topic:"",
+Hours:"",
+Date:"",
+Notes:""
+})
+
+}
+catch(err){
+    console.log(err);
+    alert("error adding progress")
+}
 }
 
 return(
@@ -74,6 +95,7 @@ onChange={handleChange}
 {/* Hours */}
 
 <input
+type="number"
 name="Hours"
 placeholder="Hours Studied"
 className="w-full border p-3 rounded"

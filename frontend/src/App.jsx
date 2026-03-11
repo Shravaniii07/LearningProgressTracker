@@ -18,6 +18,8 @@ function App() {
         <Route path="/update/:id" element={<UpdateProgress />} />
       </Routes>
     </BrowserRouter>
+
+   
   );
 }
 

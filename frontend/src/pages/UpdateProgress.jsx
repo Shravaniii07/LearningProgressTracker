@@ -21,7 +21,7 @@ setData({...data,[e.target.name]:e.target.value});
 const handleSubmit=async(e)=>{
 e.preventDefault();
 
-await axios.put("http://localhost:5000/update-progress",{
+await axios.put("http://localhost:8000/book/update-progress",{
 Id:id,
 ...data
 });
@@ -44,9 +44,10 @@ Update Progress
 
 <input name="Topic" placeholder="Topic"
 className="w-full border p-3 rounded"
+value={data.Topic}
 onChange={handleChange}/>
 
-<input name="Technology" placeholder="Technology"
+<input name="Subject" placeholder="Subject"
 className="w-full border p-3 rounded"
 onChange={handleChange}/>
 

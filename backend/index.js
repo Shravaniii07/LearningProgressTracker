@@ -5,7 +5,7 @@ const dbConnect = require("./database");
 
 const router = require("./routes/progressRoute");
 
-const port = 5000;
+const port = 8000;
 
 dbConnect();
 
@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 
 
 
-app.use("/", router);
+app.use("/book", router);
 
 app.listen(port,()=>{
     console.log(`server is listening to port ${port}`);
