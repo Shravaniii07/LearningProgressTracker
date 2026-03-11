@@ -2,28 +2,47 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <h1 className="text-2xl font-bold tracking-wide">
-          📚 Learning Tracker
-        </h1>
+    <div className="flex justify-between items-center px-10 py-5 bg-white shadow-md">
 
-        <div className="space-x-6 text-lg">
-          <Link to="/" className="hover:text-yellow-300 transition">
-            Home
-          </Link>
+      <h1 className="text-2xl font-bold text-indigo-600">
+        Learning Tracker
+      </h1>
 
-          <Link to="/add" className="hover:text-yellow-300 transition">
-            Add Progress
-          </Link>
+      <div className="space-x-6">
 
-          <Link to="/view" className="hover:text-yellow-300 transition">
-            View Progress
-          </Link>
-        </div>
+        <Link
+          to="/"
+          className="text-gray-700 hover:text-indigo-600 font-medium"
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/dashboard"
+          className="text-gray-700 hover:text-indigo-600 font-medium"
+        >
+          Dashboard
+        </Link>
+
+        <Link
+          to="/add"
+          className="text-gray-700 hover:text-indigo-600 font-medium"
+        >
+          Add Progress
+        </Link>
+
+        <Link
+          to="/view"
+          className="text-gray-700 hover:text-indigo-600 font-medium"
+        >
+          View Progress
+        </Link>
+
       </div>
-    </nav>
+
+    </div>
+
   );
 }
 

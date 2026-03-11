@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
     <div className="min-h-screen bg-gray-100 p-10">
+      <Navbar />
 
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-indigo-600">
