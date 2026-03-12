@@ -33,6 +33,6 @@ router.get("/get-progress",handleGetProgress);
 
 router.delete("/delete-progress",handleDeleteProgress);
 
-router.put("/update-progress",handleUpdateProgress);
+router.put("/update-progress/:id",handleUpdateProgress);
 
 module.exports = router;

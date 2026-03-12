@@ -69,22 +69,42 @@ res.status(500).json({msg:"Server Error"})
 
 
 // UPDATE PROGRESS
-const handleUpdateProgress = async(req,res)=>{
-try{
+// const handleUpdateProgress = async(req,res)=>{
+// try{
 
-const {Id,...data} = req.body;
+// const {Id,...data} = req.body;
 
-await progress.findByIdAndUpdate(Id,data);
+// await progress.findByIdAndUpdate(Id,data);
 
-res.status(200).json({
-msg:"Progress Updated"
-})
+// res.status(200).json({
+// msg:"Progress Updated"
+// })
 
-}
-catch(err){
-res.status(500).json({msg:"Server Error"})
-}
-}
+// }
+// catch(err){
+// res.status(500).json({msg:"Server Error"})
+// }
+// }
+
+const handleUpdateProgress = async (req, res) => {
+  try {
+    const { id } = req.params;  // Get id from URL
+    const data = req.body;      // Updated fields from frontend
+
+    if (!id) return res.status(400).json({ msg: "Id is required" });
+
+    const updatedProgress = await progress.findByIdAndUpdate(id, data, { new: true });
+
+    if (!updatedProgress) return res.status(404).json({ msg: "Progress not found" });
+
+    res.status(200).json({
+      msg: "Progress Updated",
+      data: updatedProgress
+    });
+  } catch (err) {
+    res.status(500).json({ msg: "Server Error", error: err.message });
+  }
+};
 
 
 module.exports = {

@@ -24,6 +24,8 @@ const deleteProgress = async (id) => {
     data:{Id:id}
   });
 
+  alert("Progress Deleted");
+
   fetchData();
 
   }
@@ -68,6 +70,7 @@ Learning Progress
 <tbody>
 
 {list.map((item)=>(
+
 <tr
 key={item._id}
 className="border-b hover:bg-gray-100"
@@ -104,6 +107,7 @@ Delete
 </td>
 
 </tr>
+
 ))}
 
 </tbody>
@@ -119,3 +123,89 @@ Delete
 }
 
 export default ViewProgress;
+
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+
+// function ViewProgress() {
+
+// const [list,setList] = useState([]);
+
+// const fetchData = async () => {
+//   try{
+//     const res = await axios.get("http://localhost:8000/book/get-progress");
+//     setList(res.data.ProgressList);
+//   }
+//   catch(err){
+//     console.log(err);
+//   }
+// };
+
+// useEffect(()=>{
+// fetchData();
+// },[]);
+
+// return(
+
+// <div className="min-h-screen bg-gray-100 p-10">
+
+// <h2 className="text-3xl font-bold text-indigo-600 mb-6">
+// Learning Progress
+// </h2>
+
+// <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
+
+// <table className="w-full text-center">
+
+// <thead className="bg-indigo-600 text-white">
+
+// <tr>
+
+// <th className="p-3">Category</th>
+// <th className="p-3">Subject</th>
+// <th className="p-3">Topic</th>
+// <th className="p-3">Hours</th>
+// <th className="p-3">Date</th>
+// <th className="p-3">Notes</th>
+
+// </tr>
+
+// </thead>
+
+// <tbody>
+
+// {list.map((item)=>(
+// <tr
+// key={item._id}
+// className="border-b hover:bg-gray-100"
+// >
+
+// <td className="p-3">{item.Category}</td>
+
+// <td className="p-3">{item.Subject}</td>
+
+// <td className="p-3">{item.Topic}</td>
+
+// <td className="p-3">{item.Hours}</td>
+
+// <td className="p-3">{item.Date}</td>
+
+// <td className="p-3">{item.Notes}</td>
+
+// </tr>
+// ))}
+
+// </tbody>
+
+// </table>
+
+// </div>
+
+// </div>
+
+// );
+
+// }
+
+// export default ViewProgress;
+

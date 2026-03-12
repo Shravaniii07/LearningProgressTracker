@@ -46,12 +46,14 @@ import Dashboard from "./pages/Dashboard";
 import AddProgress from "./pages/AddProgress";
 import ViewProgress from "./pages/ViewProgress";
 import UpdateProgress from "./pages/UpdateProgress";
+import Intro from "./pages/Intro";
+import DeleteProgress from "./pages/DeleteProgress";
 
 function App() {
   return (
     <Routes>
 
-      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Home />} />
 
       <Route
         path="/dashboard"
@@ -87,7 +89,20 @@ function App() {
             <UpdateProgress />
           </Layout>
         }
-      />
+      /> */}
+      <Route path="/" element={<Intro />} />
+
+<Route path="/home" element={<Home />} />
+
+<Route path="/dashboard" element={<Dashboard />} />
+
+<Route path="/add" element={<AddProgress />} />
+
+<Route path="/view" element={<ViewProgress />} />
+
+<Route path="/update/:id" element={<UpdateProgress />} />
+
+<Route path="/delete/:id" element={<DeleteProgress />} />
 
     </Routes>
   );
