@@ -26,17 +26,17 @@ function Navbar() {
           </Link>
 
           <Link
-            to="/add"
+            to="/login"
             className="hover:text-gray-200 font-medium"
           >
-            Add Progress
+            Login
           </Link>
 
           <Link
-            to="/view"
+            to="/signup"
             className="hover:text-gray-200 font-medium"
           >
-            View Progress
+            Signup
           </Link>
 
         </div>

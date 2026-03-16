@@ -45,6 +45,23 @@ Learning App
 🗑 Delete Progress
 </Link>
 </li>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<li>
+<Link to="/home" className="block hover:text-gray-200">
+🏠 Logout
+</Link>
+</li>
 
 </ul>
 
