@@ -46,7 +46,7 @@ navigate("/login")
 
 return(
 
-<div className="min-h-screen flex items-center justify-center bg-indigo-300">
+<div className="min-h-screen flex items-center justify-center bg-pink-200">
 
 <div className="bg-white p-10 rounded-lg shadow-lg w-96">
 
@@ -78,7 +78,7 @@ className="w-full border p-3 rounded"
 onChange={handleChange}
 />
 
-<button className="w-full bg-indigo-500 text-white p-3 rounded">
+<button className="w-full bg-pink-300 text-white p-3 rounded">
 Signup
 </button>
 

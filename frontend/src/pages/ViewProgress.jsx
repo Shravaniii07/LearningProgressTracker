@@ -51,7 +51,7 @@ Learning Progress
 
 <table className="w-full text-center">
 
-<thead className="bg-indigo-600 text-white">
+<thead className="bg-indigo-400 text-white">
 
 <tr>
 

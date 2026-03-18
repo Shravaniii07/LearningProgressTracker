@@ -39,6 +39,20 @@ function Navbar() {
             Signup
           </Link>
 
+          <Link
+            to="/contact"
+            className="hover:text-gray-200 font-medium"
+          >
+            Contact
+          </Link>
+
+          <Link
+            to="/about"
+            className="hover:text-gray-200 font-medium"
+          >
+            AboutUs
+          </Link>
+
         </div>
 
       </div>

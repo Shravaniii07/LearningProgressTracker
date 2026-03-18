@@ -13,6 +13,8 @@ import Intro from "./pages/Intro";
 import DeleteProgress from "./pages/DeleteProgress";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
 <Route path="/delete/:id" element={<DeleteProgress />} />
 <Route path="/login" element={<Login/>} />
 <Route path="/signup" element={<Signup/>} />
+<Route path="/contact" element={<Contact/>} />
+<Route path="/about" element={<About/>} />
 
     </Routes>
   );

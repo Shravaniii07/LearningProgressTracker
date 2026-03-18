@@ -40,7 +40,7 @@ alert("Invalid Email or Password")
 
 return(
 
-<div className="min-h-screen flex items-center justify-center bg-purple-300">
+<div className="min-h-screen flex items-center justify-center bg-pink-300">
 
 <div className="bg-white p-10 rounded-lg shadow-lg w-96">
 
@@ -64,7 +64,7 @@ className="w-full border p-3 rounded"
 onChange={handleChange}
 />
 
-<button className="w-full bg-purple-400 text-white p-3 rounded">
+<button className="w-full bg-pink-500 text-white p-3 rounded">
 Login
 </button>
 
